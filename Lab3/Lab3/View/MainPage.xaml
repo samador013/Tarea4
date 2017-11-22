@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Lab3"
+             x:Class="Lab3.View.MainPage"
+             x:Name="MainPage">
+    <StackLayout >
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Ingrese su filtro" HorizontalOptions="Start" VerticalOptions="Center"/>
+            <Entry Text="{Binding TextoBuscar}" WidthRequest="150" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+        </StackLayout>
+        <ListView ItemsSource="{Binding lstPersonas}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<TextCell Text="{Binding Nombre}" Detail="{Binding Descripcion}"/>-->
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.VerPersonaCommand, Source={x:Reference MainPage}}" 
+                                                          CommandParameter="{Binding Id}"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="{Binding Nombre}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Image x:Name="imgExpan" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="deleteImg.png" HeightRequest="28" WidthRequest="28"/>
+                        </StackLayout>
+                        <!--<StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Nombre}" VerticalOptions="Center"/>
+                            <Image Source="deleteImg.jpg" HorizontalOptions="EndAndExpand" VerticalOptions="Start">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.VerPersonaCommand,Source={x:Reference MainPage}}" CommandParameter="{Binding Id}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>-->
+                    </ViewCell>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout>
+            <Entry Text="{Binding NuevaPersona}"/>
+            <Button Text="Agregar" Command="{Binding AgregarPersonaCommand}"/>
+        </StackLayout>       
+    </StackLayout>
+</ContentPage>

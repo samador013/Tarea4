@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab3.View.FormatPage">
+    <!--<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray">
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" BackgroundColor="Blue">
+             -->
+    <!--top controls-->
+    <!-- 
+            <Label Text="Enter A Code" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="Green">
+             -->
+    <!--middle controls-->
+    <!--
+            <StackLayout HeightRequest="25"></StackLayout>
+            <StackLayout HeightRequest="25"></StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" VerticalOptions="End" BackgroundColor="Gray">
+             -->
+    <!--bottom controls-->
+    <!-- 
+            <Button Text="Test" />
+        </StackLayout>
+    </StackLayout>-->
+    <StackLayout Padding="0,10,0,10" Orientation="Vertical"  >
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+            <!--Top Stack-->
+            <Image Source="contactImg.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+            <StackLayout Padding="10,0,10,0"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                <Label Text="Nombre"></Label>
+                <Label Text="Descripcion"></Label>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout BackgroundColor="LightGray"  Orientation="Vertical" VerticalOptions="CenterAndExpand" HeightRequest="200" >
+            <!--Middle Stack-->
+            <StackLayout BackgroundColor="DeepPink" HeightRequest="50" VerticalOptions="StartAndExpand"></StackLayout>
+            <StackLayout BackgroundColor="DeepSkyBlue" HeightRequest="50" VerticalOptions="EndAndExpand"></StackLayout>
+        </StackLayout>
+        <StackLayout  Orientation="Vertical" >
+            <!--Bottom Stack-->
+            <Button Text="Test"  HorizontalOptions="FillAndExpand"></Button>
+        </StackLayout>
+    </StackLayout>
+    <!--<StackLayout Orientation="Vertical" VerticalOptions="Center">
+        -->
+    <!--Main Stack-->
+    <!--
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            -->
+    <!--Top Stack-->
+    <!--
+            <Image Source="contactImg.png" HorizontalOptions="Start" VerticalOptions="Start" />
+            <StackLayout BackgroundColor="AliceBlue"  HorizontalOptions="Start" VerticalOptions="Start">
+                <Label Text="Nombre"></Label>
+                <Label Text="Descripcion"></Label>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout BackgroundColor="Gray" Orientation="Vertical" VerticalOptions="CenterAndExpand" HeightRequest="150">
+            <StackLayout BackgroundColor="Aquamarine" Orientation="Vertical" HeightRequest="25" HorizontalOptions="StartAndExpand"></StackLayout>
+            <StackLayout BackgroundColor="Lavender"  Orientation="Vertical" HeightRequest="25" HorizontalOptions="EndAndExpand"></StackLayout>
+        </StackLayout>
+        <Button Text="Prueba"></Button>
+
+    </StackLayout>-->
+</ContentPage>

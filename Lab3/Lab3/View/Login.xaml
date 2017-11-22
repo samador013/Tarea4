@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab3.View.Login">
+    <StackLayout>        
+        <Label Text="Login" TextColor="Fuchsia" FontSize="Medium"></Label>
+        <StackLayout VerticalOptions="Center">
+             <Entry Text="{Binding UsuarioStr}" Placeholder="Usuario"></Entry>
+             <Entry Text="{Binding PwdStr}" IsPassword="True" Placeholder="Password"></Entry>
+            <!--<Label Text="{Binding ErrorMsg}" TextColor="Red"></Label>-->
+            
+        </StackLayout>
+        <Button Text="Login" Command="{Binding LoginCommand}"/>
+    </StackLayout>
+</ContentPage>
