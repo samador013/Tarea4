@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lab3.View.Login">
-    <StackLayout>        
-        <Label Text="Login" TextColor="Fuchsia" FontSize="Medium"></Label>
-        <StackLayout VerticalOptions="Center">
+    <StackLayout>
+        <StackLayout Padding="0,15,0,15">
+            <Label Text="Login" TextColor="Fuchsia" FontSize="Large" HorizontalOptions="Center"></Label>
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand">
              <Entry Text="{Binding UsuarioStr}" Placeholder="Usuario"></Entry>
              <Entry Text="{Binding PwdStr}" IsPassword="True" Placeholder="Password"></Entry>
             <!--<Label Text="{Binding ErrorMsg}" TextColor="Red"></Label>-->
             
         </StackLayout>
-        <Button Text="Login" Command="{Binding LoginCommand}"/>
+        <Button Text="Login" Command="{Binding LoginCommand}" VerticalOptions="CenterAndExpand"/>
     </StackLayout>
 </ContentPage>
